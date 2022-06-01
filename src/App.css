@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.main-sign{
+height: 143px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: #000000;
+text-shadow: black 1px 0px, black 1px 1px, black 0px 1px, black -1px 1px, black -1px 0px, black -1px -1px, black 0px -1px, black 1px -1px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+background: rgba(128, 128, 128, 0.26);
+border: 10px solid rgba(128, 128, 128, 0.36);
+height: 143px;
 }
+.left-sensors{
+height: 851px;
+background: rgba(128, 128, 128, 0.26);
+border: 10px solid rgba(128, 128, 128, 0.36);
+padding-top: 15px;
+padding-bottom: 15px;
 
-.App-link {
-  color: #61dafb;
 }
+.sensors{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+color: #000000;
+margin: 15px 0px 15px 0px;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-window{
+height: 472px;
+background: rgba(128, 128, 128, 0.26);
+border-width: 10px 10px 10px 20px;
+border-style: solid;
+border-color: rgba(128, 128, 128, 0.36);
+}
+.choise-data-window{
+height: 50px;
+
+background: rgba(128, 128, 128, 0.26);
+border-width: 10px 10px 10px 20px;
+border-style: solid;
+border-color: rgba(128, 128, 128, 0.36);
 }
