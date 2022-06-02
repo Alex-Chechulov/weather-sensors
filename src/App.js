@@ -5,6 +5,7 @@ import Line from "./components/charts/line";
 import { Button,Row,Col,Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import SensorData from './sensorData';
 import React from "react";
 // <div className="container">
 //   <h1>Build React Graphs The Easy Way</h1>
@@ -26,7 +27,7 @@ class App extends React.Component {
                         "Направление ветра",
                         "ФАР",
                         "Температура почвы",
-                        "Влежность почвы",
+                        "Влажность почвы",
                         "Влажность листьев",
                         "Кислотность почвы"],
 };
@@ -37,7 +38,12 @@ class App extends React.Component {
   this.setState({
     children: [
         this.state.children,
-        <div>{e.target.dataset.sensor}</div>
+        <div className="sensor">
+          <div>{e.target.dataset.sensor}</div>
+          <div>{SensorData(e.target.dataset.sensor).magnitude}
+          {SensorData(e.target.dataset.sensor).value}</div>
+          <button className="close">X</button>
+        </div>
     ]
 
   });
@@ -50,7 +56,7 @@ class App extends React.Component {
         <Col xs="2">
         <Row className="main-sign">Список доступных датчиков</Row>
         <Row className="left-sensors">
-            {this.state.sensors.map(sensor =><div className="sensors" key={sensor} data-sensor={sensor} onClick={this.handleClick}>{sensor}</div>)}
+            {this.state.sensors.map(sensor =><button className="sensor-selection" data-sensor={sensor} onClick={this.handleClick}>{sensor}</button>)}
         </Row>
         </Col>
         <Col xs="10">
